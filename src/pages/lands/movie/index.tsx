@@ -17,6 +17,7 @@ export function Component() {
   });
   const [stickers, setStickers] = useState<Sticker[]>([]);
   const [editingId, setEditingId] = useState<number | null>(null);
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -48,6 +49,9 @@ export function Component() {
     setEditingId(sticker.id);
     setNewSticker(sticker);
   };
+
+  // Add close handler
+  const handleClosePreview = () => setPreviewImage(null);
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
@@ -91,21 +95,54 @@ export function Component() {
                 编辑
               </button>
             </div>
-            <div className="flex-1 overflow-y-auto p-3">
-              <p className="mb-2 text-sm">{sticker.text}</p>
-              {sticker.image && (
-                <div className="flex justify-center">
-                  <img
-                    alt="Sticker"
-                    className="h-[160px] w-[100px] rounded-md object-cover"
-                    src={sticker.image}
-                  />
+            <div className="grid grid-cols-1 mx-auto max-h-[600px] max-w-2xl gap-4 overflow-y-auto p-2 lg:grid-cols-3 sm:grid-cols-2">
+              {stickers.map((stickerItem: any) => (
+                <div
+                  className="h-[300px] flex flex-col rounded-lg bg-white shadow-md"
+                  key={stickerItem.id}
+                >
+                  <div className="flex-1 overflow-y-auto p-3">
+                    <p className="mb-2 text-sm">{stickerItem.text}</p>
+                    {stickerItem.image && (
+                      <div className="flex justify-center">
+                        <img
+                          alt="Sticker"
+                          className="h-[160px] w-[130px] cursor-pointer rounded-md object-cover"
+                          src={stickerItem.image}
+                          onClick={() => setPreviewImage(stickerItem.image)}
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
           </div>
         ))}
       </div>
+
+      {/* Image Preview Modal */}
+      {previewImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={handleClosePreview}
+        >
+          <div className="relative max-h-[90%] max-w-[90%]">
+            <img
+              alt="Preview"
+              className="max-h-[90vh] max-w-full object-contain"
+              src={previewImage}
+              onClick={e => e.stopPropagation()}
+            />
+            <button
+              className="absolute right-4 top-4 h-8 w-8 flex items-center justify-center rounded-full bg-black bg-opacity-50 text-white"
+              onClick={handleClosePreview}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
