@@ -51,15 +51,15 @@ export function Component() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
-      {/* Create/Edit Form */}
-      <div className="mx-auto mb-6 max-w-2xl rounded-lg bg-white p-4 shadow-md">
+      {/* Input Form */}
+      <div className="mx-auto mb-4 max-w-2xl rounded-lg bg-white p-4 shadow-md">
         <textarea
-          className="mb-2 w-full border border-gray-300 rounded-md p-2"
+          className="mb-2 h-[120px] w-full resize-none border border-gray-300 rounded-md p-2"
           placeholder="写点什么..."
           value={newSticker.text}
-          onChange={e => setNewSticker({ ...newSticker, text: e.target.value })}
+          onChange={e => setNewSticker(prev => ({ ...prev, text: e.target.value }))}
         />
-        <div className="mb-2 flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <input
             accept="image/*"
             className="flex-1"
@@ -75,14 +75,14 @@ export function Component() {
         </div>
       </div>
 
-      {/* Stickers List */}
-      <div className="grid mx-auto max-h-[600px] max-w-2xl gap-4 overflow-y-auto">
+      {/* Stickers Grid */}
+      <div className="grid grid-cols-1 mx-auto max-h-[600px] max-w-2xl gap-4 overflow-y-auto p-2 lg:grid-cols-3 sm:grid-cols-2">
         {stickers.map(sticker => (
           <div
-            className="rounded-lg bg-white p-4 shadow-md"
+            className="h-[300px] flex flex-col rounded-lg bg-white shadow-md"
             key={sticker.id}
           >
-            <div className="mb-2 flex items-center justify-between">
+            <div className="flex items-center justify-between border-b p-3">
               <span className="text-sm text-gray-500">{sticker.date}</span>
               <button
                 className="text-blue-500 hover:text-blue-600"
@@ -91,14 +91,18 @@ export function Component() {
                 编辑
               </button>
             </div>
-            <p className="mb-2">{sticker.text}</p>
-            {sticker.image && (
-              <img
-                alt="Sticker"
-                className="h-40 w-full rounded-md object-cover"
-                src={sticker.image}
-              />
-            )}
+            <div className="flex-1 overflow-y-auto p-3">
+              <p className="mb-2 text-sm">{sticker.text}</p>
+              {sticker.image && (
+                <div className="flex justify-center">
+                  <img
+                    alt="Sticker"
+                    className="h-[160px] w-[100px] rounded-md object-cover"
+                    src={sticker.image}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </div>
