@@ -1,12 +1,7 @@
-<div align="center">
- <img src="./public/favicon.svg" width="160" />
- <h1>React SoybeanAdmin</h1>
-  <span><a href="./README.en-US.md">English</a> | 中文</span>
-</div>
+## 文档中心
 
----
+- [地址](https://react-soybean-docs.ohh-889.com/index-cn?theme=dark)
 
-[![license](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 > [!NOTE]
 > 如果您觉得 `React SoybeanAdmin` 对您有所帮助，或者您喜欢我们的项目，请在 GitHub 上给我们一个 ⭐️。您的支持是我们持续改进和增加新功能的动力！感谢您的支持！
@@ -59,9 +54,7 @@
   - [Github 仓库](https://github.com/mufeng889/react-soybean-admin)
   - [Gitee 仓库](https://gitee.com/sjgk_dl/react-admin)
 
-#### 文档
 
-- [地址](https://react-soybean-docs.ohh-889.com/index-cn?theme=dark)
 
 ### Vue版本
 

@@ -201,6 +201,53 @@ export const generatedRoutes: GeneratedRoute[] = [
     }
   },
   {
+    name: 'landpage',
+    path: '/landpage',
+    component: 'layout.base$view.landpage',
+    meta: {
+      i18nKey: 'route.landpage',
+      title: 'landpage'
+    }
+  },
+  {
+    name: 'lands',
+    path: '/lands',
+    component: 'layout.base',
+    meta: {
+      i18nKey: 'route.lands',
+      title: 'lands'
+    },
+    children: [
+      {
+        name: 'lands_books',
+        path: 'books',
+        component: 'view.lands_books',
+        meta: {
+          i18nKey: 'route.lands_books',
+          title: 'lands_books'
+        }
+      },
+      {
+        name: 'lands_movie',
+        path: 'movie',
+        component: 'view.lands_movie',
+        meta: {
+          i18nKey: 'route.lands_movie',
+          title: 'lands_movie'
+        }
+      },
+      {
+        name: 'lands_travel',
+        path: 'travel',
+        component: 'view.lands_travel',
+        meta: {
+          i18nKey: 'route.lands_travel',
+          title: 'lands_travel'
+        }
+      }
+    ]
+  },
+  {
     name: 'login',
     path: '/login',
     component: 'layout.blank',

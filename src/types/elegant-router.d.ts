@@ -49,6 +49,11 @@ declare module "@elegant-router/types" {
     "function_toggle-auth": "toggle-auth";
     "home": "/home";
     "iframe-page": "/iframe-page/:url";
+    "landpage": "/landpage";
+    "lands": "/lands";
+    "lands_books": "books";
+    "lands_movie": "movie";
+    "lands_travel": "travel";
     "login": "/login";
     "login_code-login": "code-login";
     "login_pwd-login": "pwd-login";
@@ -117,6 +122,8 @@ declare module "@elegant-router/types" {
     | "function"
     | "home"
     | "iframe-page"
+    | "landpage"
+    | "lands"
     | "login"
     | "manage"
     | "multi-menu"
@@ -155,6 +162,10 @@ declare module "@elegant-router/types" {
     | "function_tab"
     | "function_toggle-auth"
     | "home"
+    | "landpage"
+    | "lands_books"
+    | "lands_movie"
+    | "lands_travel"
     | "login_code-login"
     | "login"
     | "login_pwd-login"

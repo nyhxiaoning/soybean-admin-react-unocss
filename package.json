@@ -77,7 +77,8 @@
     "react-i18next": "15.4.0",
     "react-redux": "9.2.0",
     "react-router-dom": "7.1.1",
-    "typeit": "8.8.7"
+    "typeit": "8.8.7",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@iconify/json": "2.2.292",
