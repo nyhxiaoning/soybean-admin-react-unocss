@@ -59,6 +59,7 @@
     "@sa/simple-router": "workspace:*",
     "@sa/utils": "workspace:*",
     "ahooks": "3.8.4",
+    "animejs": "^4.0.2",
     "antd": "5.23.0",
     "classnames": "2.5.1",
     "clipboard": "2.0.11",

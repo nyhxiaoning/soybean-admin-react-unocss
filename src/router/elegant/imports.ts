@@ -32,6 +32,7 @@ export const pages: Record<LastLevelRouteKey, LazyRouteFunction<CustomRouteObjec
   function_tab: () => import("@/pages/function/tab/index.tsx"),
   "function_toggle-auth": () => import("@/pages/function/toggle-auth/index.tsx"),
   happyday_birthday: () => import("@/pages/happyday/birthday/index.tsx"),
+  happyday_havefun: () => import("@/pages/happyday/havefun/index.tsx"),
   happyday: () => import("@/pages/happyday/index.tsx"),
   home: () => import("@/pages/home/index.tsx"),
   lands_books: () => import("@/pages/lands/books/index.tsx"),

@@ -230,6 +230,7 @@ const routeMap: RouteMap = {
   "function_toggle-auth": "toggle-auth",
   "happyday": "/happyday",
   "happyday_birthday": "birthday",
+  "happyday_havefun": "havefun",
   "home": "/home",
   "iframe-page": "/iframe-page/:url",
   "lands": "/lands",

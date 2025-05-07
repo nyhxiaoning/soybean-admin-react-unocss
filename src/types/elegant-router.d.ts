@@ -49,6 +49,7 @@ declare module "@elegant-router/types" {
     "function_toggle-auth": "toggle-auth";
     "happyday": "/happyday";
     "happyday_birthday": "birthday";
+    "happyday_havefun": "havefun";
     "home": "/home";
     "iframe-page": "/iframe-page/:url";
     "lands": "/lands";
@@ -163,6 +164,7 @@ declare module "@elegant-router/types" {
     | "function_tab"
     | "function_toggle-auth"
     | "happyday_birthday"
+    | "happyday_havefun"
     | "happyday"
     | "home"
     | "lands_books"

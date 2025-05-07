@@ -195,6 +195,15 @@ export const generatedRoutes: GeneratedRoute[] = [
           i18nKey: 'route.happyday_birthday',
           title: 'happyday_birthday'
         }
+      },
+      {
+        name: 'happyday_havefun',
+        path: 'havefun',
+        component: 'view.happyday_havefun',
+        meta: {
+          i18nKey: 'route.happyday_havefun',
+          title: 'happyday_havefun'
+        }
       }
     ]
   },
