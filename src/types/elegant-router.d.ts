@@ -47,9 +47,10 @@ declare module "@elegant-router/types" {
     "function_super-page": "super-page";
     "function_tab": "tab";
     "function_toggle-auth": "toggle-auth";
+    "happyday": "/happyday";
+    "happyday_birthday": "birthday";
     "home": "/home";
     "iframe-page": "/iframe-page/:url";
-    "landpage": "/landpage";
     "lands": "/lands";
     "lands_books": "books";
     "lands_movie": "movie";
@@ -120,9 +121,9 @@ declare module "@elegant-router/types" {
     | "500"
     | "about"
     | "function"
+    | "happyday"
     | "home"
     | "iframe-page"
-    | "landpage"
     | "lands"
     | "login"
     | "manage"
@@ -161,8 +162,9 @@ declare module "@elegant-router/types" {
     | "function_super-page"
     | "function_tab"
     | "function_toggle-auth"
+    | "happyday_birthday"
+    | "happyday"
     | "home"
-    | "landpage"
     | "lands_books"
     | "lands_movie"
     | "lands_travel"

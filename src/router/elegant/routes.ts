@@ -179,6 +179,26 @@ export const generatedRoutes: GeneratedRoute[] = [
     ]
   },
   {
+    name: 'happyday',
+    path: '/happyday',
+    component: 'layout.base',
+    meta: {
+      i18nKey: 'route.happyday',
+      title: 'happyday'
+    },
+    children: [
+      {
+        name: 'happyday_birthday',
+        path: 'birthday',
+        component: 'view.happyday_birthday',
+        meta: {
+          i18nKey: 'route.happyday_birthday',
+          title: 'happyday_birthday'
+        }
+      }
+    ]
+  },
+  {
     name: 'home',
     path: '/home',
     component: 'layout.base$view.home',
@@ -198,15 +218,6 @@ export const generatedRoutes: GeneratedRoute[] = [
       i18nKey: 'route.iframe-page',
       constant: true,
       hideInMenu: true
-    }
-  },
-  {
-    name: 'landpage',
-    path: '/landpage',
-    component: 'layout.base$view.landpage',
-    meta: {
-      i18nKey: 'route.landpage',
-      title: 'landpage'
     }
   },
   {

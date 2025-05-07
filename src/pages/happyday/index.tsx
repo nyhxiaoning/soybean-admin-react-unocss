@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-const LandPage = () => {
+function Component() {
   const [stickers, setStickers] = useState<any>([]);
   const [newSticker, setNewSticker] = useState({ image: '', text: '' });
 
@@ -60,6 +60,6 @@ const LandPage = () => {
       </div>
     </div>
   );
-};
+}
 
-export default LandPage;
+export { Component };

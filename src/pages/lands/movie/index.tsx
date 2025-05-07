@@ -103,7 +103,7 @@ export function Component() {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto p-3">
-              <p className="mb-2 text-sm">{sticker.text}</p>
+              <p className="mb-2 break-all text-sm">{sticker.text}</p>
               {sticker.image && (
                 <div className="flex justify-center">
                   <img
